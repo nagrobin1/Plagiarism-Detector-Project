@@ -1,0 +1,80 @@
+<section class="col-xs-12" id="dashboard">
+
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <form name="form">
+
+        <div class="row form-group">
+          <div class="col-xs-12 text-center">
+
+            <p class="text-muted" ng-show="!!file">{{'Selected: ' }} <strong>{{file.name }}</strong>{{ ' size: ' }} <strong>{{file.size}}</strong>{{' bytes.'}}</p>
+            <div ngf-drop="validateFile()" ng-model="file" fileFormDataName="file" ngf-allow-dir="false" ngf-accept=".zip" ngf-multiple="false" class="drop-box">Drop zip file here</div>
+          </div>
+
+          <p class="text-center"><strong>OR</strong></p>
+
+          <div class="col-xs-12 text-center">
+            <div class="btn btn-default" ngf-select fileFormDataName="file" ng-model="file" name="file" ngf-accept="'application/zip'" ngf-multiple="false">Select zip file to upload</div>
+          </div>
+        </div>
+
+        <div class="row form-group submit-row" ng-hide="status.fileUploadedSuccessfully">
+          <div class="col-xs-2 col-xs-offset-4">
+            <button type="button" class="btn btn-default" ng-click="cancel()">Cancel</button>
+          </div>
+          <div class="col-xs-2">
+            <button type="submit" class="btn btn-success" ng-click="submit()" ng-disabled="!file">Submit</button>
+          </div>
+        </div>
+
+        <div class="row form-group submit-row" ng-show="status.fileUploadedSuccessfully">
+          <div class="col-xs-6 col-xs-offset-3 text-center">
+            <button class="btn btn-success" ng-click="runDetection()">Run plagiarism detection</button>
+          </div>
+        </div>
+
+        <div class="row comparision-details-container" ng-repeat="detail in comparisionDetails">
+          <div class="details col-xs-12">
+            <div class="row">
+              <div class="col-xs-6">
+                <p><strong>Submission 1</strong></p>
+                <p>{{detail.submissionPath1}}</p>
+              </div>
+              <div class="col-xs-6">
+                <p><strong>Submission 2</strong></p>
+                <p>{{detail.submissionPath2}}</p>
+              </div>
+              <div class="col-xs-12">
+                <h3 class="final-score text-danger">Match Score: {{detail.finalScore}}</h3>
+
+                <ul class="list-group">
+                  <h4>Factors</h4>
+                  <li class="list-group-item" ng-repeat="factor in detail.factorBreakdown track by $index">
+                    {{factor}}
+                  </li>
+                </ul>
+
+                <div class="detail-view" ng-show="detail.detailViewOpen">
+                  <h4>Matches found</h4>
+                  <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="match in detail.matched track by $index">
+                      {{match}}
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="col-xs-12 text-center">
+                  <button class="btn btn-default" ng-click="detail.detailViewOpen = !detail.detailViewOpen"> See {{ detail.detailViewOpen ? 'Fewer' : 'More' }} Details </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+</section>

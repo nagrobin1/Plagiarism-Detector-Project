@@ -1,0 +1,19 @@
+<nav class="navbar" id="site-nav"   ng-controller="NavigationController">
+  <ul class="nav navbar-nav">
+    <li>
+      <a ng-click="go('/home')">Home</a>
+    </li>
+    <li>
+      <a ng-click="go('/dashboard')">Dashboard</a>
+    </li>
+    <li>
+      <a ng-click="go('/help')">Help</a>
+    </li>
+    <li>
+      <a  ng-show="isLoggedIn()" ng-click="logout()">Logout</a>
+    </li>
+    <li>
+      <a ng-show="!isLoggedIn()" ng-click="go('/login')">Login</a>
+    </li>
+  </ul>
+</nav>

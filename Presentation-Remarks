@@ -1,0 +1,23 @@
+Score: 84.5
+Comments
+nice job filling in while the tech issues were ironed out. But there was too much fooling around with the screen.  The system is interesting, but the output is too hard to parse.  It's not just a matter of pretty print.  The message got lost.  But, it looks interesting - I can't tell if I should use it or not.
+on functionality: Zip file of multiple folders, good handling of nested folders and and all combinations of files, sorted in the order of their similarities.
+
+on UI and usability: UI had errors upon login. Similarities shows identifiers, literal values, comment and statement blocks, mismatch entries showed. Good details, but could have been a more btter representation of the similarities.
+on presentation: Not well prepared and organized, without slides, was hard to follow the explanation. Was not clear wrt the answer to Profesor's question. One member of the team did not present
+ on functionality: Zip file upload 
+Permutaions of files compared (good).
+
+on UI and usability: Not very clear/ intuitive of where to look or what to look or which lines were matching.
+on presentation: Could not clearly answer the questions asked
+
+Straightfoward UI. The application works with zip files which contains multiple submissions. The way similarity is being displayed is confusing, especially the code blocks. Once again, we have to manually go through the files to get hold of the similarities. While displaying the similarity, all the blocks from one file are rendered first in a group followed by the similar blocks from the second file in a second group. This is a huge let down since there is a lot of text. When there are more than two submissions inside the zip file or the contents are huge, there is a lot of scrolling involved which is not exactly user friendly.
+on functionality: Team demonstrated their system very well - many use cases were handled
+on UI and usability: UI could have been better
+on presentation: Presentation was alright
+Not very clear/ intuitive of where to look or what to look or which lines were matching.
+Could not clearly answer the questions asked
+Straightfoward UI. The application works with zip files which contains multiple submissions. The way similarity is being displayed is confusing, especially the code blocks. Once again, we have to manually go through the files to get hold of the similarities. While displaying the similarity, all the blocks from one file are rendered first in a group followed by the similar blocks from the second file in a second group. This is a huge let down since there is a lot of text. When there are more than two submissions inside the zip file or the contents are huge, there is a lot of scrolling involved which is not exactly user friendly.
+Team demonstrated their system very well - many use cases were handled
+UI could have been better
+Presentation was alright

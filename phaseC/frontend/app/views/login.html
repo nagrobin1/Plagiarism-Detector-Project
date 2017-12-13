@@ -1,0 +1,32 @@
+<div id="login">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="text-center">Log in</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-4 col-md-offset-4">
+        <form id="login-form" name="loginForm">
+          <div class="row form-group">
+            <div class="col-xs-12">
+              <label htmlFor="username">Email:</label>
+              <input type="text" class="form-control" id="username" ng-model="model.username" required="true" minLength="3" required/>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-xs-12">
+              <label htmlFor="password">Password:</label>
+              <input type="password" class="form-control" id="password" ng-model="model.password" required="true" minLength="3" required/>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-xs-12 text-center">
+              <button class="btn btn-default btn-md" ng-disabled="loginForm.$invalid" ng-click="submit()">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
